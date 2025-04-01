@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook SDK Test</title>
+</head>
+<body>
+    <h1>Facebook SDK Test on GitHub Pages</h1>
+    <p>Check console (F12) for SDK status.</p>
+
+    <!-- Load Facebook SDK -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '1051384953523508', // Replace with your Facebook App ID
+          cookie: true,
+          xfbml: true,
+          version: 'v18.0'
+        });
+        console.log("Facebook SDK loaded!");
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>
